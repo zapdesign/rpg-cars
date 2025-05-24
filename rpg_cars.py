@@ -11,7 +11,7 @@ cars = [
 ]
 
 day = 1
-money = 2000
+money = 0
 salary = 120
 public_transport = (20, 0.65)
 
