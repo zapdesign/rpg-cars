@@ -55,13 +55,13 @@ while True:
     if len(purchased) == 0:
         print(f"Valor da condução: {public_transport[0]}")
     else:
-        print(f"Seu carro alugado: {purchased[0][0]} R$ {purchased[0][1]}/dia")
+        print(f"Seu carro comprado: {purchased[0][0]} R$ {purchased[0][1]}")
 
     print()
     print(f"Dia atual {day}")
     print()
     
-    print("0 - Alugar um carro | 1 - Vender o carro | 2 - Trabalhar")
+    print("0 - Comprar um carro | 1 - Vender o carro | 2 - Trabalhar")
     
     op = int(input(">> "))
 
@@ -84,7 +84,7 @@ while True:
             cod = input(">> ")
 
             if cod == "s" or cod == "S":
-                pass
+                continue
             else:
                 cod_car = int(cod)
 
@@ -134,7 +134,7 @@ while True:
         if len(purchased) == 0:
             print(f"Transporte publico")
             print(f"Gasto do dia R${public_transport[0]}")
-            print(f"Perda de tempo do dia {public_transport[1]*100}%")
+            print(f"Tempo trabalhado {public_transport[1]*100}%")
 
             s = int(salary * public_transport[1])
             balance = s - public_transport[0]
@@ -146,7 +146,7 @@ while True:
             print(purchased[0][0])
             newPurchased = purchased[0]
             print(f"Custo de manutenção do carro R${newPurchased[3]}")
-            print(f"Perda de tempo do dia {newPurchased[2]*100}%")
+            print(f"Tempo trabalhado {newPurchased[2]*100}%")
 
             s = int(salary * newPurchased[2])
             balance = s - newPurchased[3]
